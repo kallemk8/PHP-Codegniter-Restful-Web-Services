@@ -31,6 +31,19 @@ class homepage extends CI_Model {
         $query = $this->db->get('livematchscore');
         return $data['match'] = $query->result();
     }
+    public function get_single_match_id2($matchid){
+        $this->db->select("matchrecent.runs");
+        $this->db->order_by('ID',"DESC");
+        $this->db->where('ID', $matchid);
+        $this->db->where('innings', 2);
+        
+        $this->db->from('livematchscore');
+        $this->db->join('matchrecent', 'matchrecent.match_id = livematchscore.ID');
+        $query = $this->db->get();
+        return $data['match2'] = $query->result();
+    }
+
+
 }
 
 ?>

@@ -4,10 +4,9 @@
 		<div class="col-md-3">
 			<div class="right-sidebar">
 				<h2 class="sidebar-title">LATEST VIDEOS</h2>
-
 				<ul class="latest-news-sidebar">
 					<?php foreach($videos as $video):?>
-					<li><a href="<?php echo base_url().$video->url."/".$video->ID; ?>">
+					<li><a href="<?php echo base_url()."cricket-videos/".$video->url."/".$video->ID; ?>">
 					<img src="<?php echo base_url().$video->videoimage."/".$video->ID; ?>" class="max-width" width="100%" >
 					<?php echo $video->videotitle; ?></a>
 					<div class="time-remaing"><?php echo $video->postdate; ?></div>
