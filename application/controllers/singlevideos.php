@@ -44,12 +44,28 @@
 			$this->load->model('cricketvideos');
 	        $data['topfour'] = $this->common->get_four_matchs();
 			$this->load->view('templates/header', $data);
-
 			$postid = $this->uri->segment(3);
 			$data['playerinfo'] = $this->cricketvideos->single_player($postid);
 			$this->load->view('playerinfo', $data);
 			$this->load->view('templates/footer');
 		}
+
+		public function singlematch()
+		{
+			$this->load->model('common');
+			$this->load->model('cricketvideos');
+	        $data['topfour'] = $this->common->get_four_matchs();
+			$this->load->view('templates/header', $data);
+			$postid = $this->uri->segment(2);
+			$data['matchinfo'] = $this->cricketvideos->single_match($postid);
+			$data['matchscore'] = $this->cricketvideos->single_match2($postid);
+			$data['playbatsman'] = $this->cricketvideos->play_batsman($postid);
+			$data['playbowler'] = $this->cricketvideos->play_bowler($postid);
+			$data['matchcomments'] = $this->cricketvideos->match_comments($postid);
+			$this->load->view('matchinfo', $data);
+			$this->load->view('templates/footer');
+		}
+
 	}
 
 ?>

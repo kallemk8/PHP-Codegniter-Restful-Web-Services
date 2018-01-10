@@ -54,6 +54,7 @@ $route['cricket-videos/(:any)/(:num)'] = 'singlevideos';
 $route['cricket-news/(:any)/(:num)'] = 'singlevideos/singlepost';
 $route['cricket-photos/(:any)/(:num)'] = 'singlevideos/singlephotos';
 $route['player/(:any)/(:num)'] = 'singlevideos/singleplayer';
+$route['(:any)/(:num)'] = 'singlevideos/singlematch';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['email'] = 'Email_Controller';
