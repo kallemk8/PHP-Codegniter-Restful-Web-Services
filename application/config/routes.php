@@ -59,3 +59,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['email'] = 'Email_Controller';
 $route['single'] = 'postview';
+$route['Student'] = 'Student';
