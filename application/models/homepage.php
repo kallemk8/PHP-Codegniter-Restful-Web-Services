@@ -1,5 +1,5 @@
 <?php
-class homepage extends CI_Model {
+class Homepage extends CI_Model {
     public function index(){
         parent::__construct();
     }

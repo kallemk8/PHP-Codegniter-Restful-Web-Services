@@ -1,5 +1,5 @@
 <?php
-class cricketvideos extends CI_Model {
+class Cricketvideos extends CI_Model {
     public function index(){
         parent::__construct();
     }
@@ -75,6 +75,10 @@ class cricketvideos extends CI_Model {
         $this->db->from('commentry');
         $query = $this->db->get();
         return $videosingle = $query->result();
+    }
+
+    public function addvideocms($post){
+        $this->db->insert('videos',$post);
     }
 }
 ?>

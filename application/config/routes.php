@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'welcome';
 $route['cricket-videos/(:any)/(:num)'] = 'singlevideos';
-$route['cricket-news/(:any)/(:num)'] = 'singlevideos/singlepost';
+$route['cricket-news/(:any)/(:num)'] = 'Postview';
 $route['cricket-photos/(:any)/(:num)'] = 'singlevideos/singlephotos';
 $route['player/(:any)/(:num)'] = 'singlevideos/singleplayer';
 $route['(:any)/(:num)'] = 'singlevideos/singlematch';
@@ -59,4 +59,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['email'] = 'Email_Controller';
 $route['single'] = 'postview';
-$route['Student'] = 'Student';
+$route['api'] = 'Api';

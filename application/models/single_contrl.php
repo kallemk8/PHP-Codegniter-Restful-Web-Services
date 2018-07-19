@@ -1,5 +1,5 @@
 <?php
-class single_contrl extends CI_Model {
+class Single_contrl extends CI_Model {
     public function index(){
         parent::__construct();
     }

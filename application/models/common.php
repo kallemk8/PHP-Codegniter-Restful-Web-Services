@@ -1,5 +1,5 @@
 <?php
-class common extends CI_Model {
+class Common extends CI_Model {
     public function index(){
         parent::__construct();
     }

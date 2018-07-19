@@ -1,5 +1,5 @@
 <?php
-class topfourmatchs extends CI_Model {
+class Topfourmatchs extends CI_Model {
 
 
     public function index(){

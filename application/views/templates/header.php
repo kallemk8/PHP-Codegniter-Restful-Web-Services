@@ -29,21 +29,21 @@
 				<?php if($four->match_type==2||$four->match_type==3): ?>
 				<div class="team-one">
 					<span class="team-name">
-						<?php echo $name = $this->common->team_mini_name($four->team_name_1);  ?>
+						<?php echo $name = $this->Common->team_mini_name($four->team_name_1);  ?>
 					</span> 
 					<?php if($four->match_inning!=0): ?>
 					<span class="team-score ">
-					<?php $matchscore = $this->common->get_match_total($four->ID, 1); echo $matchscore['total'].'/'.$matchscore['wickets'];  ?> 
+					<?php $matchscore = $this->Common->get_match_total($four->ID, 1); echo $matchscore['total'].'/'.$matchscore['wickets'];  ?> 
 					</span>
 					<?php endif; ?>
 				</div>
 				<div class="team-one">
 					<span class="team-name">
-						<?php echo $name = $this->common->team_mini_name($four->team_name_2); ?>
+						<?php echo $name = $this->Common->team_mini_name($four->team_name_2); ?>
 						</span> 
 					<span class="team-score ">
 						<?php if($four->match_inning==2): ?>
-					<?php $matchscore = $this->common->get_match_total($four->ID, 2); echo $matchscore['total'].'/'.$matchscore['wickets']; ?> 
+					<?php $matchscore = $this->Common->get_match_total($four->ID, 2); echo $matchscore['total'].'/'.$matchscore['wickets']; ?> 
 					<?php endif; ?>
 					</span>
 				</div>

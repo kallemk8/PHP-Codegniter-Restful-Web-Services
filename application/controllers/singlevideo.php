@@ -1,5 +1,5 @@
 <?php 
-	class Welcome extends CI_Controller {
+	class Singlevideo extends CI_Controller {
 		public function index()
 		{
 			$this->load->model('common');

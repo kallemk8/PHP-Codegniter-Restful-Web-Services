@@ -1,16 +1,20 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class postview extends CI_Controller {
+class Postview extends CI_Controller {
 	public function index()
 	{
-		$this->load->model('common');
-		$this->load->model('single_contrl');
-        $data['topfour'] = $this->common->get_four_matchs();
+		$this->load->model('Common');
+		$this->load->model('Homepage');
+        $data['topfour'] = $this->Common->get_four_matchs();
 		$this->load->view('templates/header', $data);
-		$data['match'] = $this->single_contrl->get_single_match_id(13);
-		
-		$this->load->view('single', $data);
+		$data['posts'] = $this->Homepage->get_home_news();
+		$data['photos'] = $this->Homepage->get_home_photos();
+		$data['videos'] = $this->Homepage->get_home_videos();
+		$data['match2'] = $this->Homepage->get_single_match_id2(158);
+		$this->load->view('home', $data);
 		$this->load->view('templates/footer');
 	}
+	
 }
